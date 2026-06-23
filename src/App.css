@@ -1,0 +1,24 @@
+const theme = createTheme({
+  components: {
+    // Name of the component
+    .characterButtonButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          backgroundColor: "red",
+        },
+      },
+    },
+  },
+});
+
+html body {
+  display: block;
+  place-items: normal;
+}
+
+.characterButton {
+  /* Why doesn't this work? (See line #39 in App.js for where this class is applied) */
+  background-color: red;
+}
