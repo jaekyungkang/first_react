@@ -50,9 +50,9 @@ function App() {
     setSearch(event.target.value);
   }
 
-  // let matching = memory.filter((match) =>
-  //   match.toLowerCase().includes(search).toLowerCase(),
-  // );
+  let filtered = memory.filter((mem) =>
+    mem.text.toLowerCase().includes(search.toLowerCase()),
+  );
 
   return (
     <>
@@ -98,8 +98,8 @@ function App() {
       </Box>
 
       <Grid spacing={4} container>
-        {memory.map((mem) => (
-          <Grid>
+        {filtered.map((mem, index) => (
+          <Grid xs={12} sm={6} md={4}>
             <DataCard
               title={mem.title}
               imageURL={mem.imageURL}
