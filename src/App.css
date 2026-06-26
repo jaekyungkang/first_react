@@ -1,18 +1,3 @@
-const theme = createTheme({
-  components: {
-    // Name of the component
-    .characterButtonButton: {
-      styleOverrides: {
-        // Name of the slot
-        root: {
-          // Some CSS
-          backgroundColor: "red",
-        },
-      },
-    },
-  },
-});
-
 html body {
   display: block;
   place-items: normal;
